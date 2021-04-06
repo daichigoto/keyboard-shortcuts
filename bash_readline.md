@@ -32,7 +32,6 @@
 
 ##### .inpturcに追加する設定
 
-	"\e\C-h": backward-kill-word	# ESC Backspace
 	"\e\e[3~": kill-word		# ESC Delete
 
 |キー|操作|
