@@ -183,6 +183,7 @@
 |\e[H|「Home」|
 |\e[F|「End」|
 |\C-?|「Ctrl」＋「Backspace」|
+|\e[3;5~|「Ctrl」＋「Delete」|
 |\e[11~|「F1」|
 |\e[12~|「F2」|
 |\e[13~|「F3」|
