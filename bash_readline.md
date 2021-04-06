@@ -16,7 +16,6 @@
 ### .inpturcに追加する設定
 
 	"\C-h": backward-kill-word	# Ctrl-Backspace
-	"\e[3;5~": kill-word		# Ctrl-Delete
 	"\e[1;5H": unix-line-discard	# Ctrl-Home
 	"\e[1;5F": kill-line		# Ctrl-End
 
