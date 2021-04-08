@@ -9,3 +9,7 @@
 ## PowerShell
 
 [PSReadLine](powershell_psreadline.md)
+
+## Microsoft Excel
+
+[Excel](excel.md)
