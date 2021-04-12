@@ -160,6 +160,7 @@
 |\C-x\C-r|「Ctrl」＋「x」「Ctrl」＋「r」|re-read-init-file|
 |\e[0n|クエリステータスレポート（応答）|redraw-current-line|
 |\er|「ESC」「r」|redraw-current-line|
+|\C-r|「Ctrl」＋「r」|reverse-search-history|
 |\e\C-r|「ESC」「Ctrl」＋「r」|revert-line|
 |\C-@|「Ctrl」＋「@」|set-mark|
 |\e\C-e|「ESC」「Ctrl」＋「e」|shell-expand-line|
