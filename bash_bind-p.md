@@ -141,10 +141,10 @@
 |\C-n|「Ctrl」＋「n」|next-history|
 |\eOB|「↓」|next-history|
 |\e[B|「↓」|next-history|
-|\en|「ESC」n」|non-incremental-forward-search-history|
-|\ep|「ESC」p」|non-incremental-reverse-search-history|
+|\en|「ESC」「n」|non-incremental-forward-search-history|
+|\ep|「ESC」「p」|non-incremental-reverse-search-history|
 |\C-o|「Ctrl」＋「o」|operate-and-get-next|
-|\C-x!|「Ctrl」＋「x!」|possible-command-completions|
+|\C-x!|「Ctrl」＋「x 」「!」|possible-command-completions|
 |\e=|「ESC」「=」|possible-completions|
 |\e?|「ESC」「?」|possible-completions|
 |\C-x/|「Ctrl」＋「x」「/」|possible-filename-completions|
