@@ -154,7 +154,7 @@
 |\C-p|「Ctrl」＋「p」|previous-history|
 |\eOA|「↑」|previous-history|
 |\e[A|「↑」|previous-history|
-|\C-p|「Ctrl」＋「q」|quoted-insert|
+|\C-q|「Ctrl」＋「q」|quoted-insert|
 |\C-v|「Ctrl」＋「v」|quoted-insert|
 |\e[2~|「Insert」|quoted-insert|
 |\C-x\C-r|「Ctrl」＋「x」「Ctrl」＋「r」|re-read-init-file|
