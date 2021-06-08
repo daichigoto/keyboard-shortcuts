@@ -70,6 +70,18 @@
 |「Ctrl」＋「_」|アンドゥ。|
 |「Ctrl」＋「l」|スクリーンクリア。|
 
+## 文字をそのまま入力する
+
+|キー|操作|
+|:---|:---|
+|「Ctrl」＋「v」|文字をそのまま入力する。|
+|「Ctrl」＋「q」|文字をそのまま入力する。|
+
+##### .bashrcに追加する設定
+
+	stty start undef	# dismiss Ctrl-q for readline's quoted-insert
+	stty stop undef		# dismiss according to start
+
 ## Windows Terminal キーとキー表記
 
 |キー|キー表記|
