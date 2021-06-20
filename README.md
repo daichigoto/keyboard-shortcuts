@@ -1,4 +1,4 @@
-# キーボードショートカット
+# Keyboard shortcuts
 
 ## bash
 
