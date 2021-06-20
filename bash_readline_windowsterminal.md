@@ -2,15 +2,15 @@
 
 ## コマンドを実行
 
-##### .bashrcに追加する設定
-
-	stty discard undef	# dismiss Ctrl-o
-
 |キー|操作|
 |:---|:---|
 |「Enter」|コマンドラインの内容を実行し、コマンドラインをクリア。|
 |「Ctrl」＋「o」|コマンドラインの内容を実行し、コマンドラインはキープ。|
 |「ESC」「#」|コマンドラインの内容をコメントに変更し、コマンドラインを実行し、コマンドラインをクリア。|
+
+##### .bashrcに追加する設定
+
+	stty discard undef	# dismiss Ctrl-o
 
 ## カーソル移動
 
@@ -25,12 +25,6 @@
 
 ## 削除
 
-##### .inpturcに追加する設定
-
-	"\C-h": backward-kill-word	# Ctrl-Backspace
-	"\e[1;5H": unix-line-discard	# Ctrl-Home
-	"\e[1;5F": kill-line		# Ctrl-End
-
 |キー|操作|
 |:---|:---|
 |「Backspace」|カーソルのひとつ左の文字を削除。|
@@ -39,6 +33,12 @@
 |「Ctrl」＋「Delete」|カーソルから単語末までを削除。|
 |「Ctrl」＋「Home」|カーソルのひとつ左の文字から行頭までを削除。|
 |「Ctrl」＋「End」|カーソルから行末までを削除。|
+
+##### .inpturcに追加する設定
+
+	"\C-h": backward-kill-word	# Ctrl-Backspace
+	"\e[1;5H": unix-line-discard	# Ctrl-Home
+	"\e[1;5F": kill-line		# Ctrl-End
 
 ## コマンド履歴
 
