@@ -8,6 +8,8 @@
 
 ## zsh
 
+[zshzle (Windows Terminal)](zsh_zshzle_windowsterminal.md)  
+[zshzle (Mac Terminal)](zsh_zshzle_macterminal.md)  
 [bindkey](zsh_bindkey.md)
 
 ## PowerShell

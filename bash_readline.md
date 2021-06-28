@@ -25,7 +25,7 @@
 
 ## 削除(Windows)
 
-##### .inpturcに追加する設定
+##### .inputrcに追加する設定
 
 	"\C-h": backward-kill-word	# Ctrl-Backspace
 	"\e[1;5H": unix-line-discard	# Ctrl-Home
@@ -42,7 +42,7 @@
 
 ## 削除(Mac)
 
-##### .inpturcに追加する設定
+##### .inputrcに追加する設定
 
 	"\e\e[3~": kill-word		# ESC Delete
 

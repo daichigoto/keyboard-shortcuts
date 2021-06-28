@@ -34,7 +34,7 @@
 |「Ctrl」＋「Home」|カーソルのひとつ左の文字から行頭までを削除。|
 |「Ctrl」＋「End」|カーソルから行末までを削除。|
 
-##### .inpturcに追加する設定
+##### .inputrcに追加する設定
 
 	"\C-h": backward-kill-word	# Ctrl-Backspace
 	"\e[1;5H": unix-line-discard	# Ctrl-Home

@@ -1,4 +1,4 @@
-# bash readline ショートカットキー
+# zsh zshzle ショートカットキー
 
 ## コマンドを実行
 
@@ -6,11 +6,11 @@
 |:---|:---|
 |「Enter」|コマンドラインの内容を実行し、コマンドラインをクリア。|
 |「Ctrl」＋「o」|コマンドラインの内容を実行し、コマンドラインはキープ。|
-|「ESC」「#」|コマンドラインの内容をコメントに変更し、コマンドラインを実行し、コマンドラインをクリア。|
+|該当なし|コマンドラインの内容をコメントに変更し、コマンドラインを実行し、コマンドラインをクリア。|
 
-##### .bashrcに追加する設定
+##### .zshrcに追加する設定
 
-	stty discard undef	# dismiss Ctrl-o
+	bindkey '^O'		accept-and-hold		# Ctrl-o
 
 ## カーソル移動
 
@@ -18,10 +18,15 @@
 |:---|:---|
 |「→」|カーソルを1文字右へ移動。|
 |「←」|カーソルを1文字左へ移動。|
-|「Home」|カーソルを行頭へ移動。|
-|「End」|カーソルを行末へ移動。|
+|「Ctrl」＋「A」|カーソルを行頭へ移動。|
+|「Ctrl」＋「E」|カーソルを行末へ移動。|
 |「Ctrl」＋「→」|カーソルを単語の末尾へ移動、すでに単語の末尾の場合は、次の単語の末尾へ移動。|
 |「Ctrl」＋「←」|カーソルを単語の先頭へ移動、すでに単語の先頭の場合は、前の単語の先頭へ移動。|
+
+##### .zshrcに追加する設定
+
+	bindkey '^[[1;5C'	forward-word		# Ctrl-→
+	bindkey '^[[1;5D'	backward-word		# Ctrl-←
 
 ## 削除
 
@@ -29,14 +34,14 @@
 |:---|:---|
 |「Backspace」|カーソルのひとつ左の文字を削除。|
 |「Delete」|カーソルのある場所の文字を削除。|
-|「ESC」「Backspace」|カーソルのひとつ左の文字から単語頭までを削除。|
-|「ESC」「Delete」|カーソルから単語末までを削除。|
-|「Ctrl」＋「u」|カーソルのひとつ左の文字から行頭までを削除。|
-|「Ctrl」＋「k」|カーソルから行末までを削除。|
+|「Ctrl」＋「Backspace」|カーソルのひとつ左の文字から単語頭までを削除。|
+|「Ctrl」＋「Delete」|カーソルから単語末までを削除。|
+|該当なし|カーソルのひとつ左の文字から行頭までを削除。|
+|「Ctrl」＋「End」|カーソルから行末までを削除。|
 
-##### .inputrcに追加する設定
+##### .zshrcに追加する設定
 
-	"\e\e[3~": kill-word		# ESC Delete
+	bindkey '^[^[[3~'	kill-word		# ESC-Delete
 
 ## コマンド履歴
 
@@ -57,9 +62,9 @@
 
 |キー|操作|
 |:---|:---|
-|「Ctrl」＋「x」「(」|キーボードマクロの記録を開始。|
-|「Ctrl」＋「x」「)」|キーボードマクロの記録を終了。|
-|「Ctrl」＋「x」「e」|キーボードマクロを実行。|
+|該当なし|キーボードマクロの記録を開始。|
+|該当なし|キーボードマクロの記録を終了。|
+|該当なし|キーボードマクロを実行。|
 
 ## アンドゥとクリア
 
@@ -75,35 +80,36 @@
 |「Ctrl」＋「v」|文字をそのまま入力する。|
 |「Ctrl」＋「q」|文字をそのまま入力する。|
 
-##### .bashrcに追加する設定
+##### .zshrcに追加する設定
 
-	stty start undef	# dismiss Ctrl-q for readline's quoted-insert
-	stty stop undef		# dismiss according to start
+	stty start undef				# dismiss Ctrl-q for zshzle's quoted-insert
+	stty stop undef					# dismiss according to start
+	bindkey '^Q'		quoted-insert		# Ctrl-q
 
 ## Mac Terminal キーとキー表記
 
 |キー|キー表記|
 |:---|:---|
-|「ESC」|\e|
-|「ESC」「ESC」|\e\e|
+|「ESC」|^[|
+|「ESC」「ESC」|^[^[|
 |「Home」|なし|
 |「Insert」|なし|
-|「Delete」|\e[3~|
+|「Delete」|^[[3~|
 |「End」|なし|
 |「Page Up」|なし|
 |「Page Down」|なし|
-|「F1」|\eOP|
-|「F2」|\eOQ|
-|「F3」|\eOR|
-|「F4」|\eOS|
-|「F5」|\eO15~|
-|「F6」|\eO17~|
-|「F7」|\eO18~|
-|「F8」|\eO19~|
-|「F9」|\eO20~|
+|「F1」|^[OP|
+|「F2」|^[OQ|
+|「F3」|^[OR|
+|「F4」|^[OS|
+|「F5」|^[O15~|
+|「F6」|^[O17~|
+|「F7」|^[O18~|
+|「F8」|^[O19~|
+|「F9」|^[O20~|
 |「F10」|なし|
-|「F11」|\eO23~|
-|「F12」|\eO24~|
+|「F11」|^[O23~|
+|「F12」|^[O24~|
 |「Alt」＋「Home」|なし|
 |「Alt」＋「Insert」|なし|
 |「Alt」＋「Delete」|なし|
@@ -112,26 +118,26 @@
 |「Alt」＋「Page Down」|なし|
 |「Ctrl」＋「Home」|なし|
 |「Ctrl」＋「Insert」|なし|
-|「Ctrl」＋「Delete」|\e[3;5~|
+|「Ctrl」＋「Delete」|^[[3;5~|
 |「Ctrl」＋「End」|なし|
 |「Ctrl」＋「Page Up」|なし|
 |「Ctrl」＋「Page Down」|なし|
-|「↑」|\e[A|
-|「↓」|\e[B|
-|「→」|\e[C|
-|「←」|\e[D|
+|「↑」|^[[A|
+|「↓」|^[[B|
+|「→」|^[[C|
+|「←」|^[[D|
 |「Alt」＋「↑」|なし|
 |「Alt」＋「↓」|なし|
 |「Alt」＋「→」|なし|
 |「Alt」＋「←」|なし|
-|「Ctrl」＋「↑」|\e[A|
-|「Ctrl」＋「↓」|\e[B|
-|「Ctrl」＋「→」|\e[1;5C|
-|「Ctrl」＋「←」|\e[1;5D|
-|貼り付け開始|\e[200~|
-|クエリステータスレポート|\e[5n|
-|クエリステータスレポート（応答）|\e[0n|
-|「Backspace」|\C-H|
-|「Ctrl」＋「Backspace」|\C-H|
-|「Tab」|\C-I|
-|「Enter」|\C-M|
+|「Ctrl」＋「↑」|^[[A|
+|「Ctrl」＋「↓」|^[[B|
+|「Ctrl」＋「→」|^[[1;5C|
+|「Ctrl」＋「←」|^[[1;5D|
+|貼り付け開始|^[[200~|
+|クエリステータスレポート|^[[5n|
+|クエリステータスレポート（応答）|^[[0n|
+|「Backspace」|^H|
+|「Ctrl」＋「Backspace」|^H|
+|「Tab」|^I|
+|「Enter」|^M|
