@@ -6,6 +6,10 @@
 [readline (Mac Terminal)](bash_readline_macterminal.md)  
 [bind](bash_bind-p.md)
 
+## zsh
+
+[bindkey](zsh_bindkey.md)
+
 ## PowerShell
 
 [PSReadLine](powershell_psreadline.md)
